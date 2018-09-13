@@ -8,7 +8,10 @@
  * isObject(null); // false
  */
 const isObject = data => {
-  /* your logic here...*/
+    for (var item in data) 
+       if (data.hasOwnProperty(item))
+           return false;
+    return true;
 };
 
 export default isObject;
